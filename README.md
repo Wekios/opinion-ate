@@ -1,4 +1,13 @@
-# Getting Started with Create React App
+# opinion-ate
+
+An app for tracking reviews of dishes at different restaurants.
+
+production url: [website](https://wekios-opinion-ate.netlify.app/)
+
+[![Netlify Status](https://api.netlify.com/api/v1/badges/3613f3ad-e81a-499f-a9c3-9cd3772d52c3/deploy-status)](https://app.netlify.com/sites/wekios-opinion-ate/deploys)
+
+Dependencies are locked with a `yarn.lock` file, so please use `yarn` and not
+`npm` for installing them.
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
