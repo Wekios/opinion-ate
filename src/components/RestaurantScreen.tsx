@@ -4,7 +4,7 @@ export function RestaurantScreen() {
   return (
     <div>
       <h1>Restaurant</h1>
-      <RestaurantList loadRestaurants={() => {}} />
+      <RestaurantList restaurants={[]} loadRestaurants={() => {}} />
     </div>
   );
 }
