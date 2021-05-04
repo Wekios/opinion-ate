@@ -1,10 +1,15 @@
+import Card from '@material-ui/core/Card';
+import CardContent from '@material-ui/core/CardContent';
+import Typography from '@material-ui/core/Typography';
 import RestaurantList from './RestaurantList';
 
 export function RestaurantScreen() {
   return (
-    <div>
-      <h1>Restaurant</h1>
-      <RestaurantList />
-    </div>
+    <Card>
+      <CardContent>
+        <Typography variant="h5">Restaurants</Typography>
+        <RestaurantList />
+      </CardContent>
+    </Card>
   );
 }
