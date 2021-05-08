@@ -2,7 +2,9 @@
 
 An app for tracking reviews of dishes at different restaurants.
 
-production url: [website](https://wekios-opinion-ate.netlify.app/)
+production url: <https://wekios-opinion-ate.netlify.app>
+
+trello board: <https://trello.com/b/ar54g6Ib/outside-in-project>
 
 [![Netlify Status](https://api.netlify.com/api/v1/badges/3613f3ad-e81a-499f-a9c3-9cd3772d52c3/deploy-status)](https://app.netlify.com/sites/wekios-opinion-ate/deploys)
 
