@@ -14,6 +14,7 @@ export type AppThunk<ReturnType = void> = ThunkAction<
 export const START_LOADING = 'START_LOADING';
 export const STORE_RESTAURANTS = 'STORE_RESTAURANTS';
 export const RECORD_LOADING_ERROR = 'RECORD_LOADING_ERROR';
+export const ADD_RESTAURANT = 'ADD_RESTAURANT';
 
 export type StoreRestaurantsAction =
   | {
@@ -21,7 +22,8 @@ export type StoreRestaurantsAction =
       payload: Restaurant[];
     }
   | { type: typeof START_LOADING }
-  | { type: typeof RECORD_LOADING_ERROR };
+  | { type: typeof RECORD_LOADING_ERROR }
+  | { type: typeof ADD_RESTAURANT; payload: Restaurant[] };
 
 export type RestaurantActions = StoreRestaurantsAction;
 
@@ -49,3 +51,18 @@ export function storeRestaurants(
 }
 
 const recordLoadingError = () => ({ type: RECORD_LOADING_ERROR });
+
+export const createRestaurant = (name: string): AppThunk => (
+  dispatch,
+  _getState,
+  api,
+) => {
+  return api.createRestaurant(name).then(record => {
+    dispatch(addRestaurant(record));
+  });
+};
+
+const addRestaurant = (record: Restaurant[]) => ({
+  type: ADD_RESTAURANT,
+  payload: record,
+});

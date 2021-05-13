@@ -13,6 +13,11 @@ const api = {
       .get<Restaurant[]>('/restaurants')
       .then(response => response.data);
   },
+  createRestaurant(name: string) {
+    return client
+      .post<Restaurant[]>('/restaurants', { name })
+      .then(({ data }) => data);
+  },
 };
 
 export default api;
